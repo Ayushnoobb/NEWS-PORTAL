@@ -1,0 +1,38 @@
+[build]
+  command = "npm run build"
+  publish = "output/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/news/homepage/*"
+  to = "https://jsugauta1.pythonanywhere.com/api/v1/news/homepage/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/v1/news/category/*"
+  to = "https://jsugauta1.pythonanywhere.com/api/v1/news/category/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/v1/news/article/*"
+  to = "https://jsugauta1.pythonanywhere.com/api/v1/news/article/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/v1/news/navbar/*"
+  to = "https://jsugauta1.pythonanywhere.com/api/v1/news/navbar/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/token/"
+  to = "https://jsugauta1.pythonanywhere.com/api/token"
+  status = 301
+  force = true

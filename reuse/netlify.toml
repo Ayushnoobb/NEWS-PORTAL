@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "output/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/news/homepage/*"
+  to = "https://jsugauta1.pythonanywhere.com/api/v1/news/homepage/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/v1/*"
+  to = "https://jsugauta1.pythonanywhere.com/:splat"
+  status = 200
+  force = true

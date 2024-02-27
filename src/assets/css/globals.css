@@ -1,0 +1,99 @@
+/* Fonts */
+/* Already using next.google.fonts */
+/* @import url("https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap"); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+/* TailwindCSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .fourth-element-padding-0 > :nth-child(3n-2) {
+    padding-left: 0;
+  }
+
+  /* Media query for small screen sizes */
+  @media screen and (max-width: 767px) {
+    .single-news-border-r-0 > :nth-child(n) {
+      padding-left: 0;
+      padding-right: 12px;
+    }
+
+    .single-news-border-r-0 > :nth-child(2n) {
+      border-right: 0;
+      padding-left: 12px;
+      padding-right: 0;
+    }
+  }
+}
+/* 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+body {
+  min-width: 360px;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Thin Scrollbar Start */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  scrollbar-gutter: stable both-edges;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  border-radius: 2rem;
+  background: #ddd;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #4339f2;
+  border-radius: 100vh;
+  border: 0.5px solid #6d64e4;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3d34ee;
+}
+
+.ql-editor{
+  font-family: 'Mukta',sans-serif;
+}
+
+.mukta-font{
+  font-family: 'Mukta',sans-serif;
+}
+
+
+/* Thin Scrollbar End */
